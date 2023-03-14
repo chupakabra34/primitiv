@@ -26,6 +26,12 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        // Напишите ваш код здесь
+        System.out.print("Введите с клавиатуры число и имя:");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String a = reader.readLine().;
+        System.out.println(a);
+        int age = a.indexOf(" ");
+
+
     }
 }

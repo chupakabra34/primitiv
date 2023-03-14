@@ -17,7 +17,8 @@ Requirements:
 
 public class Solution {
     public static int min(int a, int b) {
-        //напишите тут ваш код
+        if (a < b) return a;
+        else return b;
     }
 
     public static void main(String[] args) {
