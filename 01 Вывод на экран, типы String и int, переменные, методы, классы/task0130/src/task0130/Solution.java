@@ -26,8 +26,8 @@ public class Solution {
     }
 
     public static double convertCelsiusToFahrenheit(int celsius) {
-        //напишите тут ваш код
+        double rezult = (9.0 / 5.0) * celsius + 32.0;
 
-        return 0;
+        return rezult;
     }
 }
