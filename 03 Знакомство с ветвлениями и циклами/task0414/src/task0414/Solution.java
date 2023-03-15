@@ -30,7 +30,17 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Введите год в формате yyyy: ");
+        int year = Integer.parseInt(reader.readLine());
+        if (year % 400 == 0) {
+            System.out.println("Год " + year + " високосный - количество дней в году: 366");
+        } else if (year % 100 == 0) {
+            System.out.println("Год " + year + " не високосный - количество дней в году: 365");
+        } else if (year % 4 == 0 ) {
+            System.out.println("Год " + year + " високосный - количество дней в году: 366");
+        } else {
+            System.out.println("Год " + year + " не високосный - количество дней в году: 365");
+        }
     }
 }

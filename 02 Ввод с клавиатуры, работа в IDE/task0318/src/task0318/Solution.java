@@ -26,12 +26,12 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        System.out.print("Введите с клавиатуры число и имя:");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String a = reader.readLine().;
-        System.out.println(a);
-        int age = a.indexOf(" ");
-
-
+        System.out.print("Введите число и имя через пробел: ");
+        String input = reader.readLine();
+        String[] parts = input.split(" ");
+        int num = Integer.parseInt(parts[0]);
+        String name = parts[1];
+        System.out.println(name + " захватит мир через " + num + " лет. Му-ха-ха!");
     }
 }

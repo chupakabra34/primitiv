@@ -40,7 +40,15 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Введите время в минутах: ");
+        double time = Double.parseDouble(reader.readLine());
+        if ((time % 10 < 3) || (time % 10 >= 5 && time % 10 < 8)) {
+            System.out.println("Зелёный");
+        } else if ((time % 10 >= 3 && time % 10 < 4) || (time % 10 >= 8 && time % 10 < 9)) {
+            System.out.println("Жёлтый");
+        } else if ((time % 10 >= 4 && time % 10 < 5) || (time % 10 >= 9 && time % 10 < 10)) {
+            System.out.println("Красный");
+        }
     }
 }
