@@ -23,7 +23,19 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Введите первое число: ");
+        int numberOne = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите второе число: ");
+        int numberTwo = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите третье число: ");
+        int numberThree = Integer.parseInt(reader.readLine());
+        System.out.println();
 
+        if (numberOne == numberTwo) System.out.println("3");
+        if (numberOne == numberThree) System.out.println("2");
+        if (numberTwo == numberThree) System.out.println("1");
     }
 }

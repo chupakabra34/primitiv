@@ -19,7 +19,18 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Введите первое имя: ");
+        String nameOne = reader.readLine();
+        System.out.println();
+        System.out.print("Введите второе имя: ");
+        String nameTwo = reader.readLine();
 
+        if (nameOne.equals(nameTwo)) {
+            System.out.println("Имена идентичны");
+        } else if (nameOne.length() == nameTwo.length()) {
+            System.out.println("Длины имен равны");
+
+        }
     }
 }

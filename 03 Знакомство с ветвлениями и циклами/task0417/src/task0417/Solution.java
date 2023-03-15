@@ -34,7 +34,24 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Введите первое число: ");
+        int numberOne = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите второе число: ");
+        int numberTwo = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите третье число: ");
+        int numberThree = Integer.parseInt(reader.readLine());
+        System.out.println();
+        if (numberOne == numberTwo && numberTwo == numberThree) {
+            System.out.printf("%d %d %d", numberOne, numberTwo, numberThree);
+        } else if (numberOne == numberTwo) {
+            System.out.printf("%d %d", numberOne, numberTwo);
+        } else if (numberOne == numberThree) {
+            System.out.printf("%d %d", numberOne, numberThree);
+        } else if (numberTwo == numberThree) {
+            System.out.printf("%d %d", numberTwo, numberThree);
+        }
     }
 }

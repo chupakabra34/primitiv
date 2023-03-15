@@ -17,7 +17,42 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Введите первое число: ");
+        int numberOne = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите второе число: ");
+        int numberTwo = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите третье число: ");
+        int numberThree = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите четвёртое число: ");
+        int numberFour = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print(max4(numberOne, numberTwo, numberThree, numberFour));
+    }
 
+    public static int max4(int a, int b, int c, int d) {
+        if (a == max3(a, b, c) && a > d)
+            return a;
+        else {
+            if (b == max3(a, b, c) && b > d)
+                return b;
+            else {
+                if (c == max3(a, b, c) && c > d)
+                    return c;
+                else
+                    return d;
+            }
+        }
+    }
+
+    public static int max3(int a, int b, int c) {
+        if (a > b && a > c) return a;
+        else {
+            if (b > a && b > c) return b;
+            else return c;
+        }
     }
 }

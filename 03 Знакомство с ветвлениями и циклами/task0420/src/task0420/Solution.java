@@ -18,7 +18,35 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        int numberTemp = 0;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Введите первое число: ");
+        int numberOne = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите второе число: ");
+        int numberTwo = Integer.parseInt(reader.readLine());
+        System.out.println();
+        System.out.print("Введите третье число: ");
+        int numberThree = Integer.parseInt(reader.readLine());
+        System.out.println();
 
+        System.out.printf("Введённые числа -> первое - %d, второе - %d, третье - %d \n", numberOne, numberTwo, numberThree);
+
+        if (numberOne < numberThree) {
+            numberTemp = numberOne;
+            numberOne = numberThree;
+            numberThree = numberTemp;
+        }
+        if (numberOne < numberTwo) {
+            numberTemp = numberOne;
+            numberOne = numberTwo;
+            numberTwo = numberTemp;
+        }
+        if (numberTwo < numberThree) {
+            numberTemp = numberTwo;
+            numberTwo = numberThree;
+            numberThree = numberTemp;
+        }
+        System.out.printf("Отсортированные числа -> первое - %d, второе - %d, третье - %d", numberOne, numberTwo, numberThree);
     }
 }

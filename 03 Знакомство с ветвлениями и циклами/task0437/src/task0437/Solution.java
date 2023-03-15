@@ -26,7 +26,13 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        for (int x = 1; x < 11; x++) {
+            int y = 0;
+            while (y != x) {
+                System.out.print("8");
+                y++;
+            }
+            System.out.println();
+        }
     }
 }

@@ -26,7 +26,16 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int summa=0;
+        while (true){
+            System.out.print("Введите число: ");
+            int number = Integer.parseInt(reader.readLine());
+            summa+=number;
+            if(number==-1){
+                System.out.println("Сумма введённых чисел = " + summa);
+                break;
+            }
+        }
     }
 }
